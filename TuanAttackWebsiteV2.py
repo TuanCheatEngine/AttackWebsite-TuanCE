@@ -226,7 +226,7 @@ referer = [
      "http://www.onlinewebcheck.com/check.php?url=",
      "http://www.translate.ru/url/translation.aspx?direction=er&sourceURL=",
      "http://about42.nl/www/showheaders.php;POST;about42.nl.txt",
-     "http://browsershots.org;POST;browsershots.org.txt
+     "http://browsershots.org;POST;browsershots.org.txt",
      "http://streamitwebseries.twww.tv/proxy.php?url=",
      "http://www.comicgeekspeak.com/proxy.php?url=",
      "http://67.20.105.143/bitess/plugins/content/plugin_googlemap2_proxy.php?url=",
