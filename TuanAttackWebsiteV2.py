@@ -187,7 +187,7 @@ referer = [
      "http://www.sizzlebistro.com/plugins/system/plugin_googlemap2/plugin_googlemap2_proxy.php?url=",
      "http://thebluepine.com/plugins/system/plugin_googlemap2_proxy.php?url=",
      "http://donellis.ie/plugins/system/plugin_googlemap2/plugin_googlemap2_proxy.php?url=",
-     "http://validator.w3.org/unicorn/check?ucn_task=",conformance&ucn_uri=",
+     "http://validator.w3.org/unicorn/check?ucn_task=conformance&ucn_uri=",
      "http://validator.w3.org/nu/?doc=",
      "http://www.netvibes.com/subscribe.php?url=",
      "http://www-test.cisel.ch/web/plugins/content/plugin_googlemap2_proxy.php?url=",
